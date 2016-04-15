@@ -1,0 +1,417 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC0D70461CB78F15003AE58F /* HotKeyConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC0D70401CB78F15003AE58F /* HotKeyConfig.plist */; };
+		EC0D70471CB78F15003AE58F /* NSHotKeyConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0D70421CB78F15003AE58F /* NSHotKeyConfig.m */; };
+		EC0D70481CB78F15003AE58F /* NSSettingWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0D70441CB78F15003AE58F /* NSSettingWindowController.m */; };
+		EC0D70491CB78F15003AE58F /* NSSettingWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC0D70451CB78F15003AE58F /* NSSettingWindowController.xib */; };
+		EC0E80371CB354620060137B /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0E80201CB354620060137B /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EC0E80381CB354620060137B /* JsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0E80221CB354620060137B /* JsonModel.m */; };
+		EC0E80391CB354620060137B /* NSObject_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0E80241CB354620060137B /* NSObject_Extension.m */; };
+		EC0E803A1CB354620060137B /* JMGHeaderGen.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0E80281CB354620060137B /* JMGHeaderGen.m */; };
+		EC0E803B1CB354620060137B /* JMGImplGen.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0E802A1CB354620060137B /* JMGImplGen.m */; };
+		EC0E803C1CB354620060137B /* NSJsonWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0E802D1CB354620060137B /* NSJsonWindowController.m */; };
+		EC0E803D1CB354620060137B /* NSJsonWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC0E802E1CB354620060137B /* NSJsonWindowController.xib */; };
+		EC7A32DC1CA92B9700B12CE1 /* JsonModel.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = EC7A32DB1CA92B9700B12CE1 /* JsonModel.xcscheme */; };
+		EC8E663F1CBCE0AD00941003 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC8E663E1CBCE0AD00941003 /* Carbon.framework */; };
+		EC8E66411CBCE0BC00941003 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC8E66401CBCE0BC00941003 /* CoreData.framework */; };
+		ECB760021CBCDAB800D297F4 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB760011CBCDAB800D297F4 /* AppKit.framework */; };
+		ECB760041CBCDAC200D297F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB760031CBCDAC200D297F4 /* Foundation.framework */; };
+		ECB760061CBCDACB00D297F4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB760051CBCDACB00D297F4 /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EC0D70301CB78CBD003AE58F /* JsonModel-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JsonModel-Prefix.pch"; sourceTree = "<group>"; };
+		EC0D70401CB78F15003AE58F /* HotKeyConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HotKeyConfig.plist; sourceTree = "<group>"; };
+		EC0D70411CB78F15003AE58F /* NSHotKeyConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSHotKeyConfig.h; sourceTree = "<group>"; };
+		EC0D70421CB78F15003AE58F /* NSHotKeyConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHotKeyConfig.m; sourceTree = "<group>"; };
+		EC0D70431CB78F15003AE58F /* NSSettingWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSSettingWindowController.h; sourceTree = "<group>"; };
+		EC0D70441CB78F15003AE58F /* NSSettingWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSSettingWindowController.m; sourceTree = "<group>"; };
+		EC0D70451CB78F15003AE58F /* NSSettingWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSSettingWindowController.xib; sourceTree = "<group>"; };
+		EC0E801F1CB354620060137B /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		EC0E80201CB354620060137B /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		EC0E80211CB354620060137B /* JsonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonModel.h; sourceTree = "<group>"; };
+		EC0E80221CB354620060137B /* JsonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonModel.m; sourceTree = "<group>"; };
+		EC0E80231CB354620060137B /* NSObject_Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObject_Extension.h; sourceTree = "<group>"; };
+		EC0E80241CB354620060137B /* NSObject_Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObject_Extension.m; sourceTree = "<group>"; };
+		EC0E80271CB354620060137B /* JMGHeaderGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMGHeaderGen.h; sourceTree = "<group>"; };
+		EC0E80281CB354620060137B /* JMGHeaderGen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMGHeaderGen.m; sourceTree = "<group>"; };
+		EC0E80291CB354620060137B /* JMGImplGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMGImplGen.h; sourceTree = "<group>"; };
+		EC0E802A1CB354620060137B /* JMGImplGen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMGImplGen.m; sourceTree = "<group>"; };
+		EC0E802C1CB354620060137B /* NSJsonWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSJsonWindowController.h; sourceTree = "<group>"; };
+		EC0E802D1CB354620060137B /* NSJsonWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSJsonWindowController.m; sourceTree = "<group>"; };
+		EC0E802E1CB354620060137B /* NSJsonWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSJsonWindowController.xib; sourceTree = "<group>"; };
+		EC7A32D21CA92B9700B12CE1 /* JsonModel.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JsonModel.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC7A32DB1CA92B9700B12CE1 /* JsonModel.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = JsonModel.xcscheme; path = JsonModel.xcodeproj/xcshareddata/xcschemes/JsonModel.xcscheme; sourceTree = SOURCE_ROOT; };
+		EC7A32E31CA92B9700B12CE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC8E663E1CBCE0AD00941003 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		EC8E66401CBCE0BC00941003 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		ECB760011CBCDAB800D297F4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		ECB760031CBCDAC200D297F4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ECB760051CBCDACB00D297F4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC7A32D01CA92B9700B12CE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC8E66411CBCE0BC00941003 /* CoreData.framework in Frameworks */,
+				EC8E663F1CBCE0AD00941003 /* Carbon.framework in Frameworks */,
+				ECB760061CBCDACB00D297F4 /* Cocoa.framework in Frameworks */,
+				ECB760041CBCDAC200D297F4 /* Foundation.framework in Frameworks */,
+				ECB760021CBCDAB800D297F4 /* AppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC0D703F1CB78F15003AE58F /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				EC0D70401CB78F15003AE58F /* HotKeyConfig.plist */,
+				EC0D70411CB78F15003AE58F /* NSHotKeyConfig.h */,
+				EC0D70421CB78F15003AE58F /* NSHotKeyConfig.m */,
+				EC0D70431CB78F15003AE58F /* NSSettingWindowController.h */,
+				EC0D70441CB78F15003AE58F /* NSSettingWindowController.m */,
+				EC0D70451CB78F15003AE58F /* NSSettingWindowController.xib */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		EC0E801D1CB354620060137B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EC0E801E1CB354620060137B /* JSONKit */,
+				EC0E80211CB354620060137B /* JsonModel.h */,
+				EC0E80221CB354620060137B /* JsonModel.m */,
+				EC0E80231CB354620060137B /* NSObject_Extension.h */,
+				EC0E80241CB354620060137B /* NSObject_Extension.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		EC0E801E1CB354620060137B /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				EC0E801F1CB354620060137B /* JSONKit.h */,
+				EC0E80201CB354620060137B /* JSONKit.m */,
+			);
+			path = JSONKit;
+			sourceTree = "<group>";
+		};
+		EC0E80251CB354620060137B /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				EC0E80261CB354620060137B /* JsonModelGen */,
+				EC0E802B1CB354620060137B /* JsonWindowController */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		EC0E80261CB354620060137B /* JsonModelGen */ = {
+			isa = PBXGroup;
+			children = (
+				EC0E80271CB354620060137B /* JMGHeaderGen.h */,
+				EC0E80281CB354620060137B /* JMGHeaderGen.m */,
+				EC0E80291CB354620060137B /* JMGImplGen.h */,
+				EC0E802A1CB354620060137B /* JMGImplGen.m */,
+			);
+			path = JsonModelGen;
+			sourceTree = "<group>";
+		};
+		EC0E802B1CB354620060137B /* JsonWindowController */ = {
+			isa = PBXGroup;
+			children = (
+				EC0E802C1CB354620060137B /* NSJsonWindowController.h */,
+				EC0E802D1CB354620060137B /* NSJsonWindowController.m */,
+				EC0E802E1CB354620060137B /* NSJsonWindowController.xib */,
+			);
+			path = JsonWindowController;
+			sourceTree = "<group>";
+		};
+		EC7A32C91CA92B9700B12CE1 = {
+			isa = PBXGroup;
+			children = (
+				EC7A32D91CA92B9700B12CE1 /* JsonModel */,
+				EC7A32D41CA92B9700B12CE1 /* Frameworks */,
+				EC7A32D31CA92B9700B12CE1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC7A32D31CA92B9700B12CE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC7A32D21CA92B9700B12CE1 /* JsonModel.xcplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC7A32D41CA92B9700B12CE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC8E66401CBCE0BC00941003 /* CoreData.framework */,
+				EC8E663E1CBCE0AD00941003 /* Carbon.framework */,
+				ECB760051CBCDACB00D297F4 /* Cocoa.framework */,
+				ECB760031CBCDAC200D297F4 /* Foundation.framework */,
+				ECB760011CBCDAB800D297F4 /* AppKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC7A32D91CA92B9700B12CE1 /* JsonModel */ = {
+			isa = PBXGroup;
+			children = (
+				EC0D703F1CB78F15003AE58F /* Setting */,
+				EC0E801D1CB354620060137B /* Base */,
+				EC0E80251CB354620060137B /* Json */,
+				EC7A32E31CA92B9700B12CE1 /* Info.plist */,
+				EC7A32DA1CA92B9700B12CE1 /* Supporting Files */,
+				EC0D70301CB78CBD003AE58F /* JsonModel-Prefix.pch */,
+			);
+			path = JsonModel;
+			sourceTree = "<group>";
+		};
+		EC7A32DA1CA92B9700B12CE1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC7A32DB1CA92B9700B12CE1 /* JsonModel.xcscheme */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC7A32D11CA92B9700B12CE1 /* JsonModel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC7A32E61CA92B9700B12CE1 /* Build configuration list for PBXNativeTarget "JsonModel" */;
+			buildPhases = (
+				EC7A32CE1CA92B9700B12CE1 /* Sources */,
+				EC7A32CF1CA92B9700B12CE1 /* Resources */,
+				EC7A32D01CA92B9700B12CE1 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JsonModel;
+			productName = JsonModel;
+			productReference = EC7A32D21CA92B9700B12CE1 /* JsonModel.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC7A32CA1CA92B9700B12CE1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = lvshouyi;
+				TargetAttributes = {
+					EC7A32D11CA92B9700B12CE1 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = EC7A32CD1CA92B9700B12CE1 /* Build configuration list for PBXProject "JsonModel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EC7A32C91CA92B9700B12CE1;
+			productRefGroup = EC7A32D31CA92B9700B12CE1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC7A32D11CA92B9700B12CE1 /* JsonModel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC7A32CF1CA92B9700B12CE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC0E803D1CB354620060137B /* NSJsonWindowController.xib in Resources */,
+				EC0D70491CB78F15003AE58F /* NSSettingWindowController.xib in Resources */,
+				EC7A32DC1CA92B9700B12CE1 /* JsonModel.xcscheme in Resources */,
+				EC0D70461CB78F15003AE58F /* HotKeyConfig.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC7A32CE1CA92B9700B12CE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC0E803C1CB354620060137B /* NSJsonWindowController.m in Sources */,
+				EC0D70481CB78F15003AE58F /* NSSettingWindowController.m in Sources */,
+				EC0E80391CB354620060137B /* NSObject_Extension.m in Sources */,
+				EC0E803B1CB354620060137B /* JMGImplGen.m in Sources */,
+				EC0D70471CB78F15003AE58F /* NSHotKeyConfig.m in Sources */,
+				EC0E80371CB354620060137B /* JSONKit.m in Sources */,
+				EC0E803A1CB354620060137B /* JMGHeaderGen.m in Sources */,
+				EC0E80381CB354620060137B /* JsonModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EC7A32E41CA92B9700B12CE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		EC7A32E51CA92B9700B12CE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+			};
+			name = Release;
+		};
+		EC7A32E71CA92B9700B12CE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JsonModel/Framework",
+					"$(PROJECT_DIR)/JsonModel/other",
+					Framework,
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREFIX_HEADER = "JsonModel/JsonModel-Prefix.pch";
+				INFOPLIST_FILE = JsonModel/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taobao.JsonModel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		EC7A32E81CA92B9700B12CE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JsonModel/Framework",
+					"$(PROJECT_DIR)/JsonModel/other",
+					Framework,
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREFIX_HEADER = "JsonModel/JsonModel-Prefix.pch";
+				INFOPLIST_FILE = JsonModel/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taobao.JsonModel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC7A32CD1CA92B9700B12CE1 /* Build configuration list for PBXProject "JsonModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC7A32E41CA92B9700B12CE1 /* Debug */,
+				EC7A32E51CA92B9700B12CE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC7A32E61CA92B9700B12CE1 /* Build configuration list for PBXNativeTarget "JsonModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC7A32E71CA92B9700B12CE1 /* Debug */,
+				EC7A32E81CA92B9700B12CE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC7A32CA1CA92B9700B12CE1 /* Project object */;
+}

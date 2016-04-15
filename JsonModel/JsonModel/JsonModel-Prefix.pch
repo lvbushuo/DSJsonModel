@@ -1,0 +1,15 @@
+//
+//  JsonModel-Prefix.pch
+//  JsonModel
+//
+//  Created by lvshouyi on 16/4/8.
+//  Copyright © 2016年 lvshouyi. All rights reserved.
+//
+
+#ifndef JsonModel_Prefix_pch
+#define JsonModel_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* JsonModel_Prefix_pch */
