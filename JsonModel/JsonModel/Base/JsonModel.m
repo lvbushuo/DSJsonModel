@@ -16,6 +16,7 @@
 @property (nonatomic,   strong, readwrite) NSBundle *bundle;
 @property (nonatomic,   strong) NSJsonWindowController * window;
 @property (nonatomic,   strong) NSSettingWindowController * settingWindow;
+@property (nonatomic,   strong) NSMenuItem *actionMenuItem;
 
 @end
 
@@ -39,21 +40,22 @@
                                                    object:nil];
 
         [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(applicationWillTerminate:) name:NSApplicationWillTerminateNotification object:nil];
+        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(reloadMenu) name:HOTKEY_CHANGE object:nil];
     }
     return self;
 }
 
 - (void)applicationWillTerminate:(NSNotification *)notification
 {
-    [NSHotKeyConfig removeHotKey];
+
 }
 
 -(void)notificationListener:(NSNotification *)noti {
     NSLog(@" Notification: %@", [noti name]);
 }
+
 - (void)didApplicationFinishLaunchingNotification:(NSNotification*)noti
 {
-    [NSHotKeyConfig addHotKey];
     //removeObserver
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NSApplicationDidFinishLaunchingNotification object:nil];
     
@@ -63,10 +65,11 @@
     if (menuItem) {
         [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
         
-        NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"DS JsonModel" action:@selector(doMenuAction) keyEquivalent:@""];
-        //[actionMenuItem setKeyEquivalentModifierMask:NSAlphaShiftKeyMask | NSControlKeyMask];
+        NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"DS JsonModel" action:@selector(doMenuAction) keyEquivalent:@"J"];
         [actionMenuItem setTarget:self];
         [[menuItem submenu] addItem:actionMenuItem];
+        self.actionMenuItem = actionMenuItem;
+        [self reloadMenu];
         
         NSMenuItem *settingMenuItem = [[NSMenuItem alloc] initWithTitle:@"DS Setting" action:@selector(doSettingMenuAction) keyEquivalent:@""];
         [settingMenuItem setTarget:self];
@@ -89,6 +92,12 @@
     [self.settingWindow showWindow:self.settingWindow];
 }
 
+- (void)reloadMenu
+{
+    
+    [self.actionMenuItem setKeyEquivalentModifierMask:[NSHotKeyConfig getKeyModifiers]];
+    [self.actionMenuItem setKeyEquivalent:[NSHotKeyConfig getKeyCode] ];
+}
 
 - (void)dealloc
 {

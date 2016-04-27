@@ -23,7 +23,7 @@ typedef NS_ENUM(NSUInteger,key_type) {
 @property (weak) IBOutlet NSButton *shiftBtn;
 @property (weak) IBOutlet NSButton *optionBtn;
 @property (weak) IBOutlet NSButton *controlBtn;
-
+@property (strong)NSMutableDictionary * hotKey;
 @end
 
 @implementation NSSettingWindowController
@@ -31,19 +31,19 @@ typedef NS_ENUM(NSUInteger,key_type) {
 - (void)windowDidLoad
 {
     [super windowDidLoad];
-	NSDictionary * HotKey = [NSHotKeyConfig hotKey];
-	self.key.stringValue  = HotKey[kMenuHotKeyKey];
+	self.hotKey = [NSMutableDictionary dictionaryWithDictionary:[NSHotKeyConfig hotKey]];
+	self.key.stringValue  = self.hotKey[kMenuHotKeyKey];
     
-	NSNumber * hotKeyShift = HotKey[kMenuHotKeyMaskShift];
+	NSNumber * hotKeyShift = self.hotKey[kMenuHotKeyMaskShift];
     [self.shiftBtn.cell setState:hotKeyShift.boolValue];
     
-    NSNumber * hotKeyCmd = HotKey[kMenuHotKeyMaskCmd];
+    NSNumber * hotKeyCmd = self.hotKey[kMenuHotKeyMaskCmd];
     [self.commandBtn.cell setState:hotKeyCmd.boolValue];
     
-    NSNumber * hotKeyCtrl = HotKey[kMenuHotKeyMaskCtrl];
+    NSNumber * hotKeyCtrl = self.hotKey[kMenuHotKeyMaskCtrl];
     [self.controlBtn.cell setState:hotKeyCtrl.boolValue];
     
-    NSNumber * hotKeyOption = HotKey[kMenuHotKeyMaskAlt];
+    NSNumber * hotKeyOption = self.hotKey[kMenuHotKeyMaskAlt];
     [self.optionBtn.cell setState:hotKeyOption.boolValue];
     
 }
@@ -51,34 +51,42 @@ typedef NS_ENUM(NSUInteger,key_type) {
 
 - (IBAction)finshClick:(NSButton *)sender {
     
-  
+      [NSHotKeyConfig setHotKey:self.hotKey];
 }
 
 
 - (IBAction)clickCell:(NSButton *)sender {
     
     key_type type = sender.cell.tag;
-    NSDictionary * defaultHotKey = [NSHotKeyConfig hotKey];
-    NSMutableDictionary * HotKey = [NSMutableDictionary dictionaryWithDictionary:defaultHotKey];
+ 
     switch (type) {
         case key_shift: {
-            [HotKey setValue:@(sender.cell.state) forKey:kMenuHotKeyMaskShift];
+            [self.hotKey setValue:@(sender.cell.state) forKey:kMenuHotKeyMaskShift];
             break;
         }
         case key_option: {
-            [HotKey setValue:@(sender.cell.state) forKey:kMenuHotKeyMaskAlt];
+            [self.hotKey setValue:@(sender.cell.state) forKey:kMenuHotKeyMaskAlt];
             break;
         }
         case key_control: {
-            [HotKey setValue:@(sender.cell.state) forKey:kMenuHotKeyMaskCtrl];
+            [self.hotKey setValue:@(sender.cell.state) forKey:kMenuHotKeyMaskCtrl];
             break;
         }
         case key_commond: {
-            [HotKey setValue:@(sender.cell.state) forKey:kMenuHotKeyMaskCmd];
+            [self.hotKey setValue:@(sender.cell.state) forKey:kMenuHotKeyMaskCmd];
             break;
         }
     }
-    [NSHotKeyConfig setHotKey:HotKey];
+
 }
 
+#pragma mark - NSTextFieldDelegate
+- (BOOL)control:(NSControl *)control textShouldEndEditing:(NSText *)fieldEditor
+{
+    NSString * text = self.key.stringValue;
+    if (text) {
+        [self.hotKey setObject:text forKey:kMenuHotKeyKey];
+    }
+    return YES;
+}
 @end

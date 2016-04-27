@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#define HOTKEY_CHANGE @"HOTKEY_CHANGE"
 
 #define kMenuTitle           @"title"
 #define kMenuHotKey          @"HotKey"
@@ -17,14 +18,12 @@
 #define kMenuHotKeyMaskCtrl  @"ctrl"
 #define kMenuHotKeyMaskShift @"shift"
 
-#define kSettingFile         @"setting"
-
 @interface NSHotKeyConfig : NSObject
 
 + (void)setHotKey:(NSDictionary *)hotKey;
-
 + (NSDictionary *)hotKey;
 
-+ (void)addHotKey;
-+ (void)removeHotKey;
++ (NSUInteger)getKeyModifiers;
++ (NSString *)getKeyCode;
+
 @end
